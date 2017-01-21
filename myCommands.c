@@ -11,6 +11,11 @@ void *(*f)(stack_t **stack, unsigned int line_number)
     builtins commands[] = {
         {"push", myPush}
         {"pall", myPall}
+        {"pint", myPint}
+        {"pop", myPop}
+        {"swap", mySwap}
+        {"add", myAdd}
+        {"nop", myNop}
         {NULL, NULL}
 };
 
