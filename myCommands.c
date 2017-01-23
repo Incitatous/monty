@@ -20,13 +20,12 @@ func_t myCmd(char *cmd)
 */
 		{NULL, NULL}
 };
-    i = 0;
-    while ((commands[i]).opcode != NULL)
-    {
-	    if (strcmp((commands[i]).opcode, cmd) == 0)
-		    return ((commands[i]).f);
-
-	    i++;
-    }
-    return (NULL);
+	i = 0;
+	while ((commands[i]).opcode != NULL)
+	{
+		if (strcmp((commands[i]).opcode, cmd) == 0)
+			return ((commands[i]).f);
+		i++;
+	}
+	return (NULL);
 }
