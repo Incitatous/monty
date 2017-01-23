@@ -39,6 +39,7 @@ typedef struct instruction_s
 
 typedef void (*func_t)(stack_t **stack, unsigned int line_number);
 
+func_t myCmd(char *cmd);
 void myPush(stack_t **stack, unsigned int line_number);
 
 #endif

@@ -9,14 +9,16 @@ func_t myCmd(char *cmd)
 {
 	int i;
 	instruction_t commands[] = {
-	    {"push", myPush},
+		{"push", myPush},
+/*
 	    {"pall", myPall},
 	    {"pint", myPint},
 	    {"pop", myPop},
 	    {"swap", mySwap},
 	    {"add", myAdd},
 	    {"nop", myNop},
-	    {NULL, NULL}
+*/
+		{NULL, NULL}
 };
     i = 0;
     while ((commands[i]).opcode != NULL)

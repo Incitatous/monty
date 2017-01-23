@@ -41,7 +41,7 @@ int main(int argc, char *argv[])
 		cmd = myCmd(tok); /* why the fuck am I getting a warning?? */
 		if (cmd == NULL)
 		{
-			printf("L%d: unknown instruction %s", line_number, tok);
+			printf("L%d: unknown instruction %s\n", line_number, tok);
 			exit(EXIT_FAILURE);
 		}
 		/* only works for the basic commands*/
