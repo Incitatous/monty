@@ -2,14 +2,13 @@
 /**
  * myPush - Pushes onto the stack
  *
- * Return: Always 0 or 1
+ * Return: returns nothing
  */
-void *myPush(stack_t **stack, unsigned int line_number)
+void myPush(stack_t **stack, unsigned int line_number)
 {
     int n;
     stack_t *newElement;
     newElement = malloc(sizeof(stack_t);
-
     if (newElement == NULL)
         return (NULL);
     newElement->n = n;
@@ -24,5 +23,4 @@ void *myPush(stack_t **stack, unsigned int line_number)
         (*stack)->prev = newElement;
     }
     *stack = newElement;
-    return (*stack)
 }
