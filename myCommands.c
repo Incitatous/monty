@@ -10,12 +10,12 @@ func_t myCmd(char *cmd)
 	int i;
 	instruction_t commands[] = {
 	    {"push", myPush},
-	    {"pall", myPall},
+	    /*{"pall", myPall},
 	    {"pint", myPint},
 	    {"pop", myPop},
 	    {"swap", mySwap},
 	    {"add", myAdd},
-	    {"nop", myNop},
+	    {"nop", myNop},*/
 	    {NULL, NULL}
 };
     i = 0;
