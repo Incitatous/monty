@@ -37,18 +37,16 @@ typedef struct instruction_s
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
-typedef void (*func_t)(stack_t **stack, unsigned int line_number);
-
 /* commands */
-func_t myCmd(char *cmd);
-void myPush(stack_t **stack, unsigned int line_number);
+void (*myCmd(char *cmd, unsigned int ln))(stack_t **, unsigned int);
+void myPush(stack_t **stack, unsigned int line_number, int num);
 void myPall(stack_t **stack, unsigned int line_number);
 
 /* error printing functions */
 void usage_err(void);
 void file_err(char *av);
 void malloc_err(void);
-void inst_err(unsigned int line_number, char *s);
+void inst_err(unsigned int line_number, char *cmd);
 
 
 #endif

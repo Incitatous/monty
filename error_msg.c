@@ -18,8 +18,8 @@ void malloc_err(void)
 	exit(EXIT_FAILURE);
 }
 
-void inst_err(unsigned int line_number, char *s)
+void inst_err(unsigned int line_number, char *cmd)
 {
-	printf("L%d: unknown instruction %s\n", line_number, s);
+	printf("L%d: unknown instruction %s\n", line_number, cmd);
 	exit(EXIT_FAILURE);
 }

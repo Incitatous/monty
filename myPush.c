@@ -4,14 +4,17 @@
  *
  * Return: returns nothing
  */
-void myPush(stack_t **stack, unsigned int line_number)
+void myPush(stack_t **stack, unsigned int line_number, int num)
 {
-    int n;
     stack_t *newElement;
-    newElement = malloc(sizeof(stack_t);
+
+    newElement = malloc(sizeof(stack_t));
     if (newElement == NULL)
-        return (NULL);
-    newElement->n = n;
+    {
+	    printf("Error: malloc failed\n");
+	    exit(EXIT_FAILURE);
+    }
+    newElement->n = num;
     newElement->prev = NULL;
     if (*stack == NULL)
     {

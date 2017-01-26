@@ -7,15 +7,13 @@
  */
 void myPall(stack_t **stack, unsigned int line_number)
 {
-    size_t  length;
-    const stack_t *h;
+	stack_t *h;
+	(void) line_number;
 
-    h = *stack;
-    length = 0;
-    while (h != NULL)
-    {
-        ++length;
-        printf("%d\n", h->n);
-        h = h->next;
-    }
+	h = *stack;
+	while (h != NULL)
+	{
+		printf("%d\n", h->n);
+		h = h->next;
+	}
 }

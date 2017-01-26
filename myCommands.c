@@ -5,11 +5,10 @@
  * @cmd: commands passed
  * Return:
  */
-func_t myCmd(char *cmd)
+void (*myCmd(char *cmd, unsigned int ln))(stack_t **stack, unsigned int ln)
 {
 	int i;
 	instruction_t commands[] = {
-		{"push", myPush},
 		{"pall", myPall},
 
 /*	    {"pint", myPint},
@@ -25,7 +24,9 @@ func_t myCmd(char *cmd)
 	{
 		if (strcmp((commands[i]).opcode, cmd) == 0)
 			return ((commands[i]).f);
+
 		i++;
 	}
+	inst_err(ln, cmd);
 	return (NULL);
 }
