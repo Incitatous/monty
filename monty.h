@@ -39,7 +39,16 @@ typedef struct instruction_s
 
 typedef void (*func_t)(stack_t **stack, unsigned int line_number);
 
+/* commands */
 func_t myCmd(char *cmd);
 void myPush(stack_t **stack, unsigned int line_number);
+void myPall(stack_t **stack, unsigned int line_number);
+
+/* error printing functions */
+void usage_err(void);
+void file_err(char *av);
+void malloc_err(void);
+void inst_err(unsigned int line_number, char *s);
+
 
 #endif

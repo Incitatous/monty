@@ -17,33 +17,24 @@ int main(int argc, char *argv[])
 
 	stk = NULL;
 	if (argc != 2)
-	{
-		printf("USAGE: monty file\n");
-		exit(EXIT_FAILURE);
-	}
+		usage_err;
+
 	fp = fopen(argv[1], "r");
 	if (fp == NULL)
-	{
-		printf("Error: Can't open file %s\n", argv[1]);
-		exit(EXIT_FAILURE);
-	}
+		file_err(argv[1]);
+
 	buf = malloc(sizeof(char) * size);
 	if (buf == NULL)
-	{
-		printf("Error: malloc failed\n");
-		exit(EXIT_FAILURE);
-	}
+		malloc_err;
+
 	while (!feof(fp))
 	{
 		fgets(buf, size, fp);
 		/* what do we return when buf/file is empty? */
-		tok = strtok(buf, " ");
+		tok = strtok(buf, " \t");
 		cmd = myCmd(tok); /* why the fuck am I getting a warning?? */
 		if (cmd == NULL)
-		{
-			printf("L%d: unknown instruction %s\n", line_number, tok);
-			exit(EXIT_FAILURE);
-		}
+			inst_err(line_number, tok);
 		/* only works for the basic commands*/
 		cmd(&stk, line_number);
 		++line_number;
