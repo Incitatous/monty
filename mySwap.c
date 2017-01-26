@@ -8,7 +8,7 @@
  */
 void mySwap(stack_t **stack, unsigned int ln)
 {
-	stack_t *tmp, *cur, *pre;
+	stack_t *tmp, *mytmp,  *cur, *pre;
 	int i = 0;
 
 	tmp = *stack;
@@ -25,7 +25,11 @@ void mySwap(stack_t **stack, unsigned int ln)
 	cur = pre = *stack;
 	if (cur->next != NULL)
 	{
-		/* gotta figure out! */
-		cur = cur->next;
+        tmp = pre;
+        mytmp = cur;
+		myPop(pre);
+        myPop(cur);
+        myPush(tmp);
+        myPush(cur);
 	}
 }
