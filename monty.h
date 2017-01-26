@@ -55,5 +55,6 @@ void mySwap(stack_t **stack, unsigned int ln);
 
 /* helper functions */
 void _push(char *cmd, stack_t **stack, unsigned int ln);
+void free_list(stack_t **stack);
 
 #endif
