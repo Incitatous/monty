@@ -5,6 +5,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
+#include <ctype.h>
 #include <sys/stat.h>
 
 /**
@@ -39,14 +40,20 @@ typedef struct instruction_s
 
 /* commands */
 void (*myCmd(char *cmd, unsigned int ln))(stack_t **, unsigned int);
-void myPush(stack_t **stack, unsigned int line_number, int num);
-void myPall(stack_t **stack, unsigned int line_number);
+void myPush(stack_t **stack, int num);
+void myPall(stack_t **stack, unsigned int ln);
+void myPint(stack_t **stack, unsigned int ln);
+void myPop(stack_t **stack, unsigned int ln);
+void myAdd(stack_t **stack, unsigned int ln);
 
 /* error printing functions */
-void usage_err(void);
-void file_err(char *av);
-void malloc_err(void);
-void inst_err(unsigned int line_number, char *cmd);
+void usage_err(int n);
+void file_err(char *av, FILE *fp);
+void malloc_err(char *buf);
+void inst_err(unsigned int ln, char *cmd);
+void mySwap(stack_t **stack, unsigned int ln);
 
+/* helper functions */
+void _push(char *cmd, stack_t **stack, unsigned int ln);
 
 #endif

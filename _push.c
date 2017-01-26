@@ -21,5 +21,5 @@ void _push(char *cmd, stack_t **stack, unsigned int ln)
 			++i;
 	}
 	num = atoi(cmd);
-	myPush(stack, ln, num);
+	myPush(stack, num);
 }

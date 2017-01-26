@@ -4,7 +4,7 @@
  *
  * Return: returns nothing
  */
-void myPush(stack_t **stack, unsigned int line_number, int num)
+void myPush(stack_t **stack, int num)
 {
     stack_t *newElement;
 

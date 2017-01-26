@@ -10,13 +10,10 @@ void (*myCmd(char *cmd, unsigned int ln))(stack_t **stack, unsigned int ln)
 	int i;
 	instruction_t commands[] = {
 		{"pall", myPall},
-
-/*	    {"pint", myPint},
-	    {"pop", myPop},
-	    {"swap", mySwap},
-	    {"add", myAdd},
-	    {"nop", myNop},
-*/
+		{"pint", myPint},
+		{"pop", myPop},
+		{"swap", mySwap},
+		{"add", myAdd},
 		{NULL, NULL}
 };
 	i = 0;

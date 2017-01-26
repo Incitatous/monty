@@ -9,23 +9,17 @@
 int main(int argc, char *argv[])
 {
 	FILE *fp;
-	ssize_t size = 10;
-	int num;
+	ssize_t size = 1000;
 	int line_number = 1;
 	char *cmd, *buf;
 	stack_t *stk;
 
 	stk = NULL;
-	if (argc != 2)
-		usage_err;
-
+	usage_err(argc);
 	fp = fopen(argv[1], "r");
-	if (fp == NULL)
-		file_err(argv[1]);
-
+	file_err(argv[1], fp);
 	buf = malloc(sizeof(char) * size);
-	if (buf == NULL)
-		malloc_err;
+	malloc_err(buf);
 
 	while (1)
 	{
@@ -35,15 +29,16 @@ int main(int argc, char *argv[])
 			cmd = strtok(buf, " \t\n");
 			if (strcmp(cmd, "push") == 0)
 			{
-				num = atoi(strtok(NULL, " \t\n"));
-				myPush(&stk, line_number, num);
-				++line_number;
+				cmd = strtok(NULL, " \t\n");
+				_push(cmd, &stk, line_number);
 			}
+			else if (strcmp(cmd, "nop") == 0)
+				continue;
+
 			else
-			{
 				(*myCmd)(cmd, line_number)(&stk, line_number);
-				++line_number;
-			}
+
+			++line_number;
 		}
 		else
 			break;

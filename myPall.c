@@ -1,14 +1,15 @@
 #include "monty.h"
+
 /**
  * myPall - reproduces the behavior of pall
  * @stack: SE
  * @line_number: SE
  * Return: nothing
  */
-void myPall(stack_t **stack, unsigned int line_number)
+void myPall(stack_t **stack, unsigned int ln)
 {
 	stack_t *h;
-	(void) line_number;
+	(void) ln;
 
 	h = *stack;
 	while (h != NULL)
