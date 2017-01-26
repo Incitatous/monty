@@ -25,4 +25,5 @@ void (*myCmd(char *cmd, unsigned int ln))(stack_t **stack, unsigned int ln)
 		i++;
 	}
 	inst_err(ln, cmd);
+    return (NULL);
 }
