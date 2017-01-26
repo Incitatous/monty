@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 	buf = malloc(sizeof(char) * size);
 	malloc_err(buf);
 
-	/* what is file is empty? */
+	/* what if file is empty? */
 	while (1)
 	{
 		fgets(buf, size, fp);
