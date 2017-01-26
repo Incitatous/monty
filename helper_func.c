@@ -30,3 +30,21 @@ void _push(char *cmd, stack_t **stack, unsigned int ln)
 	num = atoi(cmd);
 	myPush(stack, num);
 }
+
+/**
+ * free_list - frees a list_t list
+ * @stack: linked list
+ * Return: Freedom!
+ */
+void free_list(stack_t **stack)
+{
+    stack_t *tmp;
+
+    while (*stack != NULL)
+    {
+        tmp = *stack;
+        *stack = (*stack)->next;
+        free(tmp);
+    }
+    free(*stack);
+}
