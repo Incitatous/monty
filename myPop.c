@@ -1,5 +1,11 @@
 #include "monty.h"
 
+/**
+ * myPop -
+ * @stack:
+ * @ln:
+ * Return: returns nothing
+ */
 void myPop(stack_t **stack, unsigned int ln)
 {
 	stack_t *cur, *pre;

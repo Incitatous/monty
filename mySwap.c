@@ -1,5 +1,11 @@
 #include "monty.h"
 
+/**
+ * mySwap -
+ * @stack:
+ * @ln:
+ @ Return: returns nothing
+ */
 void mySwap(stack_t **stack, unsigned int ln)
 {
 	stack_t *tmp, *cur, *pre;
@@ -19,6 +25,7 @@ void mySwap(stack_t **stack, unsigned int ln)
 	cur = pre = *stack;
 	if (cur->next != NULL)
 	{
+		/* gotta figure out! */
 		cur = cur->next;
 	}
 }

@@ -4,7 +4,7 @@
  * main -
  * @argc:
  * @argv:
- *
+ * Return: Always 0
  */
 int main(int argc, char *argv[])
 {
@@ -21,6 +21,7 @@ int main(int argc, char *argv[])
 	buf = malloc(sizeof(char) * size);
 	malloc_err(buf);
 
+	/* what is file is empty? */
 	while (1)
 	{
 		fgets(buf, size, fp);

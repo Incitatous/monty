@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * myPint - 
+ * myPint -
  * @stack:
  * @line_number:
  * Return: returns nothing
