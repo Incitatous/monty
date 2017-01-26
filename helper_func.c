@@ -1,10 +1,10 @@
 #include "monty.h"
 
 /**
- * _push -
- * @cmd:
- * @stack:
- * @ln:
+ * _push - SE
+ * @cmd: SE
+ * @stack: SE
+ * @ln: SE
  * Return: returns nothing
  */
 void _push(char *cmd, stack_t **stack, unsigned int ln)

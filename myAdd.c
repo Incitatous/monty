@@ -1,9 +1,9 @@
 #include "monty.h"
 
 /**
- * myAdd -
- * @stack:
- * @ln:
+ * myAdd - reproduces add behavior
+ * @stack: SE
+ * @ln: SE
  * Return: returns nothing
  */
 void myAdd(stack_t **stack, unsigned int ln)

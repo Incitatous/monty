@@ -1,8 +1,8 @@
 #include "monty.h"
 /**
  * myPush - Pushes onto the stack
- * @stack:
- * @num:
+ * @stack: SE
+ * @num: SE
  * Return: returns nothing
  */
 void myPush(stack_t **stack, int num)

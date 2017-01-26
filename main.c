@@ -1,9 +1,9 @@
 #include "monty.h"
 
 /**
- * main -
- * @argc:
- * @argv:
+ * main - main
+ * @argc: SE
+ * @argv: SE
  * Return: Always 0
  */
 int main(int argc, char *argv[])

@@ -1,10 +1,10 @@
 #include "monty.h"
 
 /**
- * mySwap -
- * @stack:
- * @ln:
- @ Return: returns nothing
+ * mySwap - recreates swap
+ * @stack: SE
+ * @ln: SE
+ * Return: returns nothing
  */
 void mySwap(stack_t **stack, unsigned int ln)
 {

@@ -1,9 +1,9 @@
 #include "monty.h"
 
 /**
- * myPint -
- * @stack:
- * @line_number:
+ * myPint - reproduces pint's behavior
+ * @stack: SE
+ * @ln: SE
  * Return: returns nothing
  */
 void myPint(stack_t **stack, unsigned int ln)

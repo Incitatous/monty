@@ -1,9 +1,9 @@
 #include "monty.h"
 
 /**
- * myPop -
- * @stack:
- * @ln:
+ * myPop - recreates pop
+ * @stack: SE
+ * @ln: SE
  * Return: returns nothing
  */
 void myPop(stack_t **stack, unsigned int ln)

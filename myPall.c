@@ -3,7 +3,7 @@
 /**
  * myPall - reproduces the behavior of pall
  * @stack: SE
- * @line_number: SE
+ * @ln: SE
  * Return: nothing
  */
 void myPall(stack_t **stack, unsigned int ln)

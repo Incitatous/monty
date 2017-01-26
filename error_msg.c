@@ -1,8 +1,8 @@
 #include "monty.h"
 
 /**
- * usage_err -
- * @n:
+ * usage_err - SE
+ * @n: SE
  * Return: returns nothing
  */
 void usage_err(int n)
@@ -15,9 +15,9 @@ void usage_err(int n)
 }
 
 /**
- * file_err -
- * @av:
- * @fp:
+ * file_err - SE
+ * @av: SE
+ * @fp: SE
  * Return: returns nothing
  */
 void file_err(char *av, FILE *fp)
@@ -30,8 +30,8 @@ void file_err(char *av, FILE *fp)
 }
 
 /**
- * malloc_err -
- * @buf:
+ * malloc_err - SE
+ * @buf: SE
  * Return: returns nothing
  */
 void malloc_err(char *buf)
@@ -44,9 +44,9 @@ void malloc_err(char *buf)
 }
 
 /**
- * inst_err -
- * @line_number:
- * @cmd:
+ * inst_err - SE
+ * @line_number: SE
+ * @cmd: SE
  * Return: returns nothing
  */
 void inst_err(unsigned int line_number, char *cmd)
