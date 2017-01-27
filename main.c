@@ -9,7 +9,7 @@
 int main(int argc, char *argv[])
 {
 	FILE *fp;
-	ssize_t size = 1000;
+	size_t size = 1000;
 	int line_number = 1;
 	char *cmd, *buf;
 	stack_t *stk;
@@ -18,13 +18,13 @@ int main(int argc, char *argv[])
 	usage_err(argc);
 	fp = fopen(argv[1], "r");
 	file_err(argv[1], fp);
-	buf = malloc(sizeof(char) * size);
-	malloc_err(buf);
+	//buf = malloc(sizeof(char) * size);
+	//malloc_err(buf);
 
 	/* what if file is empty? */
 	while (1)
 	{
-		fgets(buf, size, fp);
+		getline(&buf, &size, fp);
 		if (!feof(fp))
 		{
 			cmd = strtok(buf, " \t\n");
