@@ -13,21 +13,23 @@ int main(int argc, char *argv[])
 	int line_number = 1;
 	char *cmd, *buf;
 	stack_t *stk;
-	int i = 0;
 
 	stk = NULL;
 	usage_err(argc);
 	fp = fopen(argv[1], "r");
 	file_err(argv[1], fp);
-	//buf = malloc(sizeof(char) * size);
-	//malloc_err(buf);
+	buf = malloc(sizeof(char) * size);
+	malloc_err(buf);
 
 	while (1)
 	{
 		getline(&buf, &size, fp);
-		if (!feof(fp))
+		if (feof(fp))
+			break;
+
+		else
 		{
-			if (buf[i] == '\n')
+			if (buf[0] == '\n')
 				continue;
 
 			cmd = strtok(buf, " \t\n");
@@ -44,11 +46,8 @@ int main(int argc, char *argv[])
 
 			++line_number;
 		}
-		else
-			break;
 	}
 	fclose(fp);
-	free(buf);
 	free_list(&stk);
 	return (0);
 }
