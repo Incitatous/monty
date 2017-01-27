@@ -44,7 +44,7 @@ int main(int argc, char *argv[])
 			break;
 	}
 	fclose(fp);
-    free(buf);
-    free_list(&stk);
+	free(buf);
+	free_list(&stk);
 	return (0);
 }
