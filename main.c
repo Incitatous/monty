@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
         {
             if (!(isspace((unsigned char)buf[i])))
             {
-                printf("%c\n", buf[i]);
+            //    printf("%c\n", buf[i]);
                 j = 0;
                 break;
             }
@@ -40,17 +40,17 @@ int main(int argc, char *argv[])
         }
         if (j == 1)
         {
-            printf("goes inside\n");
+            //printf("goes inside\n");
             j = 0;
             continue;
         }
 		if (!feof(fp))
 		{
-			printf("Buffer: %s\n", buf);
+			//printf("Buffer: %s\n", buf);
             cmd = strtok(buf, " \t\n");
             if (cmd == NULL)
                 continue;
-            printf("%s\n", cmd);
+            //printf("%s\n", cmd);
             if (strcmp(cmd, "push") == 0)
             {
                 cmd = strtok(NULL, " \t\n");
