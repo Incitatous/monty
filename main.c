@@ -13,6 +13,7 @@ int main(int argc, char *argv[])
 	int line_number = 1;
 	char *cmd, *buf;
 	stack_t *stk;
+	int i = 0;
 
 	stk = NULL;
 	usage_err(argc);
@@ -26,6 +27,9 @@ int main(int argc, char *argv[])
 		fgets(buf, size, fp);
 		if (!feof(fp))
 		{
+			if (buf[i] == '\n')
+				continue;
+
 			cmd = strtok(buf, " \t\n");
 			if (strcmp(cmd, "push") == 0)
 			{
