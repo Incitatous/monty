@@ -8,7 +8,8 @@
  */
 void mySwap(stack_t **stack, unsigned int ln)
 {
-	stack_t *tmp, *mytmp,  *cur, *pre;
+	int a, b;
+	stack_t *cur, *pre, *tmp;
 	int i = 0;
 
 	tmp = *stack;
@@ -23,13 +24,9 @@ void mySwap(stack_t **stack, unsigned int ln)
 		exit(EXIT_FAILURE);
 	}
 	cur = pre = *stack;
-	if (cur->next != NULL)
-	{
-        tmp = pre;
-        mytmp = cur;
-		myPop(pre);
-        myPop(cur);
-        myPush(tmp);
-        myPush(cur);
-	}
+	cur = cur->next;
+	a = pre->n;
+	b = cur->n;
+	pre->n = b;
+	cur->n = a;
 }

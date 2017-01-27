@@ -21,7 +21,6 @@ int main(int argc, char *argv[])
 	//buf = malloc(sizeof(char) * size);
 	//malloc_err(buf);
 
-	/* what if file is empty? */
 	while (1)
 	{
 		getline(&buf, &size, fp);
@@ -45,7 +44,7 @@ int main(int argc, char *argv[])
 			break;
 	}
 	fclose(fp);
-    free(buf);
-    free_list(&stk);
+	free(buf);
+	free_list(&stk);
 	return (0);
 }
