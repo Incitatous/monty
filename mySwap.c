@@ -8,11 +8,11 @@
  */
 void mySwap(stack_t **stack, unsigned int ln)
 {
-	int a, b;
-	stack_t *cur, *pre, *tmp;
-	int i = 0;
+	int i, num;
+	stack_t *tmp;
 
 	tmp = *stack;
+	i = 0;
 	while (tmp != NULL)
 	{
 		tmp = tmp->next;
@@ -23,10 +23,7 @@ void mySwap(stack_t **stack, unsigned int ln)
 		printf("L%u: can't swap, stack too short\n", ln);
 		exit(EXIT_FAILURE);
 	}
-	cur = pre = *stack;
-	cur = cur->next;
-	a = pre->n;
-	b = cur->n;
-	pre->n = b;
-	cur->n = a;
+	num = (*stack)->n;
+	(*stack)->n = (*stack)->next->n;
+	(*stack)->next->n = num;
 }
