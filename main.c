@@ -20,12 +20,12 @@ int main(int argc, char *argv[])
 		if (buf == NULL)
 			break;
 		i = 0;
-		if (buf[0] == '#')
-			return 0;
 		while (buf[i] != '\0')
 		{
 			if (buf[i] != ' ' && buf[i] != '\t')
 				break;
+			if (buf[i] == "#")
+				return 0;
 			i++;
 		}
 		if (!feof(fp))
