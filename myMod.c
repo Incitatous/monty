@@ -16,7 +16,7 @@ void myMod(stack_t **stack, unsigned int ln)
 		printf("L%u: can't mod, stack too short\n", ln);
 		exit(EXIT_FAILURE);
 	}
-	if (tmp->next == 0 || tmp->n == 0)
+	if (tmp->n == 0)
 	{
 		printf("L%u: division by zero\n", ln);
 		exit(EXIT_FAILURE);
