@@ -36,9 +36,7 @@ int main(int argc, char *argv[])
 				cmd = strtok(NULL, " \t\n");
 				_push(cmd, &stk, line_number);
 			}
-			else if (strcmp(cmd, "nop") == 0)
-				continue;
-			else
+			else if (strcmp(cmd, "nop") != 0)
 				(*myCmd)(cmd, line_number)(&stk, line_number);
 			++line_number;
 		}
