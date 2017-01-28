@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
 		i = 0;
 		while (buf[i] != '\0')
 		{
-			if (!(isspace((unsigned char)buf[i])))
+			if (buf[i] != ' ' && buf[i] != '\t')
 				break;
 			i++;
 		}
