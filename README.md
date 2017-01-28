@@ -8,8 +8,12 @@ It includes the following commands:
 - pint
 - pop
 - swap
-- add
 - nop
+- add
+- sub
+- div
+- mul
+- mod
 
 #Examples
 - push is a command that pushes to the stack.
