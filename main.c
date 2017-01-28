@@ -39,7 +39,7 @@ int main(int argc, char *argv[])
 				cmd = strtok(NULL, " \t\n");
 				_push(cmd, &stk, line_number);
 			}
-			else if (strcmp(cmd, "nop") != 0)
+			else if (strcmp(cmd, "nop") != 0 && strcmp(cmd, "#") != 0)
 				(*myCmd)(cmd, line_number)(&stk, line_number);
 		}
 		else
