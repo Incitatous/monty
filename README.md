@@ -15,16 +15,16 @@ It includes the following commands:
 - push is a command that pushes to the stack.
 
 Usage:
-$ push 1
-$ push 2
+$ push 1  
+$ push 2  
 The previous script will push 1, then 2 to the stack.
 
 - pall, will print them in reverse order - the last one pushed to the stack first and vice versa.
 
 Usage:
-$ pall
-2
-1
+$ pall  
+2  
+1  
 
 #Authors
 Monty 0.98 was created by [Kina Lee](https://github.com/kinalee) - without whom the project would not have been nearly as complete - and [Ian](https://github.com/Incitatous).
