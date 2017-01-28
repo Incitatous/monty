@@ -9,7 +9,7 @@
 int main(int argc, char *argv[])
 {
 	FILE *fp; stack_t *stk; char *cmd, *buf;
-	int line_number = 1; int i; size_t size;
+	int line_number = 0; int i; size_t size;
 
 	stk = NULL, buf = NULL;
 	usage_err(argc);
@@ -17,15 +17,18 @@ int main(int argc, char *argv[])
 	while (1)
 	{
 		getline(&buf, &size, fp);
+		if (buf == NULL)
+			break;
 		i = 0;
 		while (buf[i] != '\0')
 		{
-			if (!(isspace((unsigned char)buf[i])))
+			if (buf[i] != ' ' && buf[i] != '\t')
 				break;
 			i++;
 		}
 		if (!feof(fp))
 		{
+			++line_number;
 			if (buf[i] == '\0')
 				continue;
 			cmd = strtok(buf, " \t\n");
@@ -36,15 +39,11 @@ int main(int argc, char *argv[])
 				cmd = strtok(NULL, " \t\n");
 				_push(cmd, &stk, line_number);
 			}
-			else if (strcmp(cmd, "nop") == 0)
-				continue;
-			else
+			else if (strcmp(cmd, "nop") != 0)
 				(*myCmd)(cmd, line_number)(&stk, line_number);
-			++line_number;
 		}
 		else
 			break;
-		cmd[0] = '\0';
 	}
 	fclose(fp), free(buf), free_list(&stk);
 	return (0);
