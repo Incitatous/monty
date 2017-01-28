@@ -10,14 +10,17 @@ It includes the following commands:
 - swap
 - add
 - nop
+
 #Examples
 - push is a command that pushes to the stack.
+
 Usage:
 $ push 1
 $ push 2
 The previous script will push 1, then 2 to the stack.
 
 - pall, will print them in reverse order - the last one pushed to the stack first and vice versa.
+
 Usage:
 $ pall
 2
