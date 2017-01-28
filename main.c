@@ -24,8 +24,6 @@ int main(int argc, char *argv[])
 		{
 			if (buf[i] != ' ' && buf[i] != '\t')
 				break;
-			if (buf[i] == "#")
-				return 0;
 			i++;
 		}
 		if (!feof(fp))
