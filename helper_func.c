@@ -48,3 +48,28 @@ void free_list(stack_t **stack)
     }
     free(*stack);
 }
+
+
+/**
+ *
+ *
+ *
+
+void _isspace()
+{
+while (buf[i] != '\0')
+{
+	if (!(isspace((unsigned char)buf[i])))
+	{
+		j = 0;
+		break;
+	}
+	i++, j = 1;
+}
+if (j == 1)
+{
+	j = 0;
+	continue;
+}
+}
+*/
