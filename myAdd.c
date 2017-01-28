@@ -8,8 +8,7 @@
  */
 void myAdd(stack_t **stack, unsigned int ln)
 {
-	stack_t *tmp, *cur, *pre;
-	int sum;
+	stack_t *tmp;
 
 	tmp = *stack;
 	if (tmp == NULL || tmp->next == NULL)
