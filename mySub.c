@@ -13,7 +13,7 @@ void mySub(stack_t **stack, unsigned int ln)
 	tmp = *stack;
 	if (tmp == NULL || tmp->next == NULL)
 	{
-		printf("L%u: can't add, stack too short\n", ln);
+		printf("L%u: can't sub, stack too short\n", ln);
 		exit(EXIT_FAILURE);
 	}
 	tmp->next->n -= tmp->n;
