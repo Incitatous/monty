@@ -21,7 +21,6 @@ void (*myCmd(char *cmd, unsigned int ln))(stack_t **stack, unsigned int ln)
 	{
 		if (strcmp((commands[i]).opcode, cmd) == 0)
 			return ((commands[i]).f);
-
 		i++;
 	}
 	inst_err(ln, cmd);
