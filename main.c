@@ -9,7 +9,7 @@
 int main(int argc, char *argv[])
 {
 	FILE *fp; stack_t *stk; char *cmd, *buf;
-	int line_number = 1; int i; size_t size;
+	int line_number = 0; int i; size_t size;
 
 	stk = NULL, buf = NULL;
 	usage_err(argc);
@@ -26,6 +26,7 @@ int main(int argc, char *argv[])
 		}
 		if (!feof(fp))
 		{
+			++line_number;
 			if (buf[i] == '\0')
 				continue;
 			cmd = strtok(buf, " \t\n");
@@ -38,7 +39,6 @@ int main(int argc, char *argv[])
 			}
 			else if (strcmp(cmd, "nop") != 0)
 				(*myCmd)(cmd, line_number)(&stk, line_number);
-			++line_number;
 		}
 		else
 			break;
