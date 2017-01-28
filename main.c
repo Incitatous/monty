@@ -17,6 +17,8 @@ int main(int argc, char *argv[])
 	while (1)
 	{
 		getline(&buf, &size, fp);
+		if (buf == NULL)
+			break;
 		i = 0;
 		while (buf[i] != '\0')
 		{
@@ -42,7 +44,6 @@ int main(int argc, char *argv[])
 		}
 		else
 			break;
-		cmd[0] = '\0';
 	}
 	fclose(fp), free(buf), free_list(&stk);
 	return (0);
