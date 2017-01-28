@@ -13,6 +13,7 @@ int main(int argc, char *argv[])
 	int line_number = 1;
 	char *cmd, *buf;
 	stack_t *stk;
+	int i;
 
 	stk = NULL;
 	usage_err(argc);
@@ -23,7 +24,8 @@ int main(int argc, char *argv[])
 
 	while (1)
 	{
-		getline(&buf, &size, fp);
+		i = getline(&buf, &size, fp);
+		++i;
 		if (feof(fp))
 			break;
 
