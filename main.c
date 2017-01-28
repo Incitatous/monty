@@ -20,6 +20,8 @@ int main(int argc, char *argv[])
 		if (buf == NULL)
 			break;
 		i = 0;
+		if (buf[0] == '#')
+			return 0;
 		while (buf[i] != '\0')
 		{
 			if (buf[i] != ' ' && buf[i] != '\t')
@@ -39,7 +41,7 @@ int main(int argc, char *argv[])
 				cmd = strtok(NULL, " \t\n");
 				_push(cmd, &stk, line_number);
 			}
-			else if (strcmp(cmd, "nop") != 0 && strcmp(cmd, "#") != 0)
+			else if (strcmp(cmd, "nop"))
 				(*myCmd)(cmd, line_number)(&stk, line_number);
 		}
 		else
