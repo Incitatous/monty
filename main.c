@@ -1,5 +1,5 @@
 #include "monty.h"
-
+#include <ctype.h>
 /**
  * main - main
  * @argc: SE
@@ -9,32 +9,42 @@
 int main(int argc, char *argv[])
 {
 	FILE *fp;
-	size_t size = 1000;
+	size_t size;
 	int line_number = 1;
 	char *cmd, *buf;
 	stack_t *stk;
-	int i;
+	int i, j;
 
 	stk = NULL;
+	buf = NULL;
+	i = j = 0;
 	usage_err(argc);
 	fp = fopen(argv[1], "r");
 	file_err(argv[1], fp);
-	buf = malloc(sizeof(char) * size);
-	malloc_err(buf);
 
 	while (1)
 	{
-		i = getline(&buf, &size, fp);
-		++i;
-		if (feof(fp))
-			break;
-
-		else
+		getline(&buf, &size, fp);
+		while (buf[i] != '\0')
 		{
-			if (buf[0] == '\n')
-				continue;
-
+			if (!(isspace((unsigned char)buf[i])))
+			{
+				j = 0;
+				break;
+			}
+			i++;
+			j = 1;
+		}
+		if (j == 1)
+		{
+			j = 0;
+			continue;
+		}
+		if (!feof(fp))
+		{
 			cmd = strtok(buf, " \t\n");
+			if (cmd == NULL)
+				continue;
 			if (strcmp(cmd, "push") == 0)
 			{
 				cmd = strtok(NULL, " \t\n");
@@ -42,14 +52,16 @@ int main(int argc, char *argv[])
 			}
 			else if (strcmp(cmd, "nop") == 0)
 				continue;
-
 			else
 				(*myCmd)(cmd, line_number)(&stk, line_number);
-
 			++line_number;
 		}
+		else
+			break;
+		cmd[0] = '\0';
 	}
-	fclose(fp);
-	free_list(&stk);
-	return (0);
+    fclose(fp);
+    free(buf);
+    free_list(&stk);
+    return (0);
 }
