@@ -11,7 +11,7 @@ void myPop(stack_t **stack, unsigned int ln)
 	stack_t *cur, *pre;
 
 	pre = cur = *stack;
-	if (*stack == NULL || stack = NULL)
+	if (*stack == NULL || stack == NULL)
 	{
 		printf("L%u: can't pop an empty stack\n", ln);
 		exit(EXIT_FAILURE);
