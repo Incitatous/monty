@@ -46,6 +46,7 @@ void myPint(stack_t **stack, unsigned int ln);
 void myPop(stack_t **stack, unsigned int ln);
 void myAdd(stack_t **stack, unsigned int ln);
 void mySub(stack_t **stack, unsigned int ln);
+void myDiv(stack_t **stack, unsigned int ln);
 void myMul(stack_t **stack, unsigned int ln);
 
 /* error printing functions */

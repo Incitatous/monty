@@ -15,6 +15,7 @@ void (*myCmd(char *cmd, unsigned int ln))(stack_t **stack, unsigned int ln)
 		{"swap", mySwap},
 		{"add", myAdd},
 		{"sub", mySub},
+		{"div", myDiv},
 		{"mul", myMul},
 		{NULL, NULL}
 };
