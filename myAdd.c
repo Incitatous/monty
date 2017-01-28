@@ -16,9 +16,6 @@ void myAdd(stack_t **stack, unsigned int ln)
 		printf("L%u: can't add, stack too short\n", ln);
 		exit(EXIT_FAILURE);
 	}
-	else
-	{
-		tmp->next->n += tmp->n;
-		myPop(stack, ln);
-	}
+	tmp->next->n += tmp->n;
+	myPop(stack, ln);
 }

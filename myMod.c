@@ -21,9 +21,6 @@ void myMod(stack_t **stack, unsigned int ln)
 		printf("L%u: division by zero\n", ln);
 		exit(EXIT_FAILURE);
 	}
-	else
-	{
-		tmp->next->n /= tmp->n;
-		myPop(stack, ln);
-	}
+	tmp->next->n /= tmp->n;
+	myPop(stack, ln);
 }
