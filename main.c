@@ -1,5 +1,5 @@
 #include "monty.h"
-#include <ctype.h>
+
 /**
  * main - main
  * @argc: SE
