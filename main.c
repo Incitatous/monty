@@ -8,37 +8,22 @@
  */
 int main(int argc, char *argv[])
 {
-	FILE *fp;
-	size_t size;
-	int line_number = 1;
+	FILE *fp ; stack_t *stk;
+	int line_number = 1; int i; size_t size;
 	char *cmd, *buf;
-	stack_t *stk;
-	int i, j;
 
-	stk = NULL;
-	buf = NULL;
-	i = j = 0;
+	stk = NULL, buf = NULL;
 	usage_err(argc);
-	fp = fopen(argv[1], "r");
-	file_err(argv[1], fp);
-
+	fp = fopen(argv[1], "r"), file_err(argv[1], fp);
 	while (1)
 	{
 		getline(&buf, &size, fp);
+		i = 0;
 		while (buf[i] != '\0')
 		{
 			if (!(isspace((unsigned char)buf[i])))
-			{
-				j = 0;
 				break;
-			}
 			i++;
-			j = 1;
-		}
-		if (j == 1)
-		{
-			j = 0;
-			continue;
 		}
 		if (!feof(fp))
 		{
@@ -60,8 +45,6 @@ int main(int argc, char *argv[])
 			break;
 		cmd[0] = '\0';
 	}
-    fclose(fp);
-    free(buf);
-    free_list(&stk);
-    return (0);
+	fclose(fp), free(buf), free_list(&stk);
+	return (0);
 }
