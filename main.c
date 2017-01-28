@@ -8,9 +8,8 @@
  */
 int main(int argc, char *argv[])
 {
-	FILE *fp ; stack_t *stk;
+	FILE *fp; stack_t *stk; char *cmd, *buf;
 	int line_number = 1; int i; size_t size;
-	char *cmd, *buf;
 
 	stk = NULL, buf = NULL;
 	usage_err(argc);
@@ -27,6 +26,8 @@ int main(int argc, char *argv[])
 		}
 		if (!feof(fp))
 		{
+			if (buf[i] == '\0')
+				continue;
 			cmd = strtok(buf, " \t\n");
 			if (cmd == NULL)
 				continue;
