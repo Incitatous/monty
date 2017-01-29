@@ -46,18 +46,18 @@ e.g. To interprete `01.m` file in `bytecodes` directory, enter:
 
 
 ###Examples
-- push is a command that pushes to the stack.
+
+The following is how a Monty file should look like:
 
 ```
-$ push 1
-$ push 2
+push 1
+push 2
+pall
 ```
-The previous script will push 1, then 2 to the stack.
 
-- pall, will print them in reverse order - the last one pushed to the stack first and vice versa.
+The previous script will push 1, then 2 to the stack and will print them in reverse order - the last one pushed to the stack first and vice versa. The output will be:
 
 ```
-$ pall
 2
 1
 ```
