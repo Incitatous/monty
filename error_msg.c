@@ -1,8 +1,9 @@
 #include "monty.h"
 
 /**
- * usage_err - SE
- * @n: SE
+ * usage_err - prints an error messge and exits
+ *\when the number of given arguments is not 2
+ * @n: number of arguments passed to main
  * Return: returns nothing
  */
 void usage_err(int n)
@@ -15,9 +16,9 @@ void usage_err(int n)
 }
 
 /**
- * file_err - SE
- * @av: SE
- * @fp: SE
+ * file_err - prints an error message ane exits when fails to open a file
+ * @av: name of the file
+ * @fp: file pointer
  * Return: returns nothing
  */
 void file_err(char *av, FILE *fp)
@@ -30,8 +31,8 @@ void file_err(char *av, FILE *fp)
 }
 
 /**
- * malloc_err - SE
- * @buf: SE
+ * malloc_err - prints an error message and exits when malloc fails
+ * @buf: malloc-ed string
  * Return: returns nothing
  */
 void malloc_err(char *buf)
@@ -44,9 +45,10 @@ void malloc_err(char *buf)
 }
 
 /**
- * inst_err - SE
- * @line_number: SE
- * @cmd: SE
+ * inst_err - prints an error message and exits when
+ *\passed instruction is not executable
+ * @line_number: line number
+ * @cmd: passed command
  * Return: returns nothing
  */
 void inst_err(unsigned int line_number, char *cmd)

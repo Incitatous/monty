@@ -1,9 +1,9 @@
 #include "monty.h"
 
 /**
- * main - main
- * @argc: SE
- * @argv: SE
+ * main - interpretes monty bytecodes
+ * @argc: number of arguments passed to main
+ * @argv: arguments passed to main
  * Return: Always 0
  */
 int main(int argc, char *argv[])
@@ -19,12 +19,10 @@ int main(int argc, char *argv[])
 		getline(&buf, &size, fp);
 		if (buf == NULL)
 			break;
-		i = 0;
-		while (buf[i] != '\0')
+		for (i = 0; buf[i] != '\0'; ++i)
 		{
 			if (buf[i] != ' ' && buf[i] != '\t')
 				break;
-			i++;
 		}
 		if (!feof(fp))
 		{
