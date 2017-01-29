@@ -1,21 +1,21 @@
 #include "monty.h"
 
 /**
- * myAdd - reproduces add behavior
+ * myMul - reproduces mul behavior
  * @stack: SE
  * @ln: SE
  * Return: returns nothing
  */
-void myAdd(stack_t **stack, unsigned int ln)
+void myMul(stack_t **stack, unsigned int ln)
 {
 	stack_t *tmp;
 
 	tmp = *stack;
 	if (tmp == NULL || tmp->next == NULL)
 	{
-		printf("L%u: can't add, stack too short\n", ln);
+		printf("L%u: can't mul, stack too short\n", ln);
 		exit(EXIT_FAILURE);
 	}
-	tmp->next->n += tmp->n;
+	tmp->next->n *= tmp->n;
 	myPop(stack, ln);
 }

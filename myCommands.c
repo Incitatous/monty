@@ -14,6 +14,10 @@ void (*myCmd(char *cmd, unsigned int ln))(stack_t **stack, unsigned int ln)
 		{"pop", myPop},
 		{"swap", mySwap},
 		{"add", myAdd},
+		{"sub", mySub},
+		{"div", myDiv},
+		{"mul", myMul},
+		{"mod", myMod},
 		{NULL, NULL}
 };
 	i = 0;
@@ -21,7 +25,6 @@ void (*myCmd(char *cmd, unsigned int ln))(stack_t **stack, unsigned int ln)
 	{
 		if (strcmp((commands[i]).opcode, cmd) == 0)
 			return ((commands[i]).f);
-
 		i++;
 	}
 	inst_err(ln, cmd);
