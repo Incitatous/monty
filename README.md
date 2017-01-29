@@ -4,27 +4,27 @@
 Monty 0.98 is a scripting language that is first compiled into Monty byte codes (Just like Python). It relies on a unique stack, with specific instructions to manipulate it. The goal of this project is to create an interpreter for Monty ByteCodes files.
 
 The Monty Interpreter handles the following commands:
-- .B push
+- **push**
 : inserts an element to the stack
-- .B pall
+- **pall**
 : prints all the values on the stack, starting from the top of the stack
-- .B pint
+- **pint**
 : prints the value at the top of the stack
-- .B pop
+- **pop**
 : removes the top element of the stack
-- .B swap
+- **swap**
 : swaps the top two elements of the stack
-- .B add
+- **add**
 : adds the top two elements of the stack
-- .B nop
+- **nop**
 : skips - does not do anything
-- .B sub
+- **sub**
 : subtracts the top element of the stack from the second top element of the stack
-- .B div
+- **div**
 : divides the second top element of the stack by the top element of the stack
-- .B mul
+- **mul**
 : multiplies the second top element of the stack with the top element of the stack
-- .B mod
+- **mod**
 : computes the rest of the division of the second top element of the stack by the top element of the stack
 
 
