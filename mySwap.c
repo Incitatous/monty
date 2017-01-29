@@ -1,9 +1,9 @@
 #include "monty.h"
 
 /**
- * mySwap - recreates swap
- * @stack: SE
- * @ln: SE
+ * mySwap - swaps the top two elements of the stack
+ * @stack: pointer to the given node
+ * @ln: line number
  * Return: returns nothing
  */
 void mySwap(stack_t **stack, unsigned int ln)

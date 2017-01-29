@@ -1,9 +1,10 @@
 #include "monty.h"
 
 /**
- * mySub - reproduces sub behavior
- * @stack: SE
- * @ln: SE
+ * mySub - subtracts the top element of the stack
+ *\from the second top element of the stack
+ * @stack: pointer to the given node
+ * @ln: line nunber
  * Return: returns nothing
  */
 void mySub(stack_t **stack, unsigned int ln)

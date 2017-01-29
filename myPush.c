@@ -1,8 +1,8 @@
 #include "monty.h"
 /**
- * myPush - Pushes onto the stack
- * @stack: SE
- * @num: SE
+ * myPush - pushes an element to the stack
+ * @stack: pointer to the given node
+ * @num: value of the element to insert to the node
  * Return: returns nothing
  */
 void myPush(stack_t **stack, int num)
@@ -18,9 +18,7 @@ void myPush(stack_t **stack, int num)
 	newElement->n = num;
 	newElement->prev = NULL;
 	if (*stack == NULL)
-	{
 		newElement->next = NULL;
-	}
 	else
 	{
 		newElement->next = *stack;

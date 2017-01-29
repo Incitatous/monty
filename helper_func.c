@@ -1,10 +1,11 @@
 #include "monty.h"
 
 /**
- * _push - SE
- * @cmd: SE
- * @stack: SE
- * @ln: SE
+ * _push - prints error messages and executes atoi and
+ *\pass the result to myPush
+ * @cmd: passed command
+ * @stack: pointer to the given linked list
+ * @ln: line number
  * Return: returns nothing
  */
 void _push(char *cmd, stack_t **stack, unsigned int ln)
@@ -32,8 +33,8 @@ void _push(char *cmd, stack_t **stack, unsigned int ln)
 }
 
 /**
- * free_list - frees a list_t list
- * @stack: linked list
+ * free_list - frees a node
+ * @stack: pointer to the given node
  * Return: Freedom!
  */
 void free_list(stack_t **stack)

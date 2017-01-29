@@ -1,9 +1,10 @@
 #include "monty.h"
 
 /**
- * myMod - reproduces div behavior
- * @stack: SE
- * @ln: SE
+ * myMod - computes the rest of the division of
+ *\the second top element of the stack by the top element of the stack
+ * @stack: pointer to the given node
+ * @ln: line number
  * Return: returns nothing
  */
 void myMod(stack_t **stack, unsigned int ln)

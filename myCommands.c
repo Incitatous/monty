@@ -1,9 +1,10 @@
 #include "monty.h"
+
 /**
  * myCmd - Checks if commands exist and if so executes
  * @cmd: commands passed
- * @ln: SE
- * Return: nothing
+ * @ln: line number
+ * Return: function to the corresponding commmand or NULL
  */
 void (*myCmd(char *cmd, unsigned int ln))(stack_t **stack, unsigned int ln)
 {

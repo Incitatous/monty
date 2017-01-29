@@ -1,9 +1,9 @@
 #include "monty.h"
 
 /**
- * myPint - reproduces pint's behavior
- * @stack: SE
- * @ln: SE
+ * myPint - prints the value at the top of the stack, followed by a new line
+ * @stack: pointer to the given node
+ * @ln: line number
  * Return: returns nothing
  */
 void myPint(stack_t **stack, unsigned int ln)

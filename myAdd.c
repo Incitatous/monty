@@ -1,9 +1,9 @@
 #include "monty.h"
 
 /**
- * myAdd - reproduces add behavior
- * @stack: SE
- * @ln: SE
+ * myAdd - adds the top two elements of the stack
+ * @stack: pointer to the given node
+ * @ln: line number
  * Return: returns nothing
  */
 void myAdd(stack_t **stack, unsigned int ln)

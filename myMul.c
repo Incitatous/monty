@@ -1,9 +1,9 @@
 #include "monty.h"
 
 /**
- * myMul - reproduces mul behavior
- * @stack: SE
- * @ln: SE
+ * myMul - multiplies top two elements of the stack
+ * @stack: pointer to the given node
+ * @ln: line number
  * Return: returns nothing
  */
 void myMul(stack_t **stack, unsigned int ln)

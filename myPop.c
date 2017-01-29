@@ -1,9 +1,9 @@
 #include "monty.h"
 
 /**
- * myPop - recreates pop
- * @stack: SE
- * @ln: SE
+ * myPop - removes the top element of the stack
+ * @stack: pointer to the given stack
+ * @ln: line number
  * Return: returns nothing
  */
 void myPop(stack_t **stack, unsigned int ln)
