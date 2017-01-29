@@ -30,9 +30,9 @@ int main(int argc, char *argv[])
 			if (buf[0] == '#' || buf[i] == '\0')
 				continue;
 			cmd = strtok(buf, " \t\n");
-			else if (cmd == NULL)
+			if (cmd == NULL)
 				continue;
-			else if (strcmp(cmd, "push") == 0)
+			if (strcmp(cmd, "push") == 0)
 			{
 				cmd = strtok(NULL, " \t\n");
 				_push(cmd, &stk, line_number);
