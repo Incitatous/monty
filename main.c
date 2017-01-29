@@ -16,8 +16,6 @@ int main(int argc, char *argv[])
 	fp = fopen(argv[1], "r"), file_err(argv[1], fp);
 	while (1)
 	{
-		if (buf != NULL)
-			buf = NULL;
 		getline(&buf, &size, fp);
 		if (buf == NULL)
 			break;
@@ -29,7 +27,7 @@ int main(int argc, char *argv[])
 		if (!feof(fp))
 		{
 			++line_number;
-			if (buf[i] == '#' || buf[i] == '\0')
+			if (buf[0] == '#' || buf[i] == '\0')
 				continue;
 			cmd = strtok(buf, " \t\n");
 			if (cmd == NULL)
