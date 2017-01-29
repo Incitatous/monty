@@ -31,7 +31,7 @@ The Monty Interpreter handles the following commands:
 ###How to use
 Compile with gcc using the following command:
 ```
-$ gcc -Wall -Werror -Wextra -pedantic *.c -o monty
+gcc -Wall -Werror -Wextra -pedantic *.c -o monty
 ```
 
 To execute, enter the following command:
