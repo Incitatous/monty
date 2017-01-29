@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
 		if (!feof(fp))
 		{
 			++line_number;
-			if (buf[i] == '\0')
+			if (buf[i] == '#' || buf[i] == '\0')
 				continue;
 			cmd = strtok(buf, " \t\n");
 			if (cmd == NULL)
