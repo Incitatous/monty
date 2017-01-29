@@ -11,12 +11,13 @@ int main(int argc, char *argv[])
 	FILE *fp; stack_t *stk; char *cmd, *buf;
 	int line_number = 0; int i; size_t size;
 
-	stk = NULL;
+	stk = NULL; buf = NULL;
 	usage_err(argc);
 	fp = fopen(argv[1], "r"), file_err(argv[1], fp);
 	while (1)
 	{
-		buf = NULL;
+		if (buf != NULL)
+			buf = NULL;
 		getline(&buf, &size, fp);
 		if (buf == NULL)
 			break;
