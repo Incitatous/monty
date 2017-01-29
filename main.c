@@ -43,6 +43,6 @@ int main(int argc, char *argv[])
 		else
 			break;
 	}
-	fclose(fp), free(buf), free_list(&stk);
+	free(buf), free_list(&stk), fclose(fp);
 	return (0);
 }
