@@ -10,9 +10,9 @@
  */
 void _push(char *cmd, stack_t **stack, unsigned int ln)
 {
-	int i, num;
+	int i, num, bool;
 
-	i = 0;
+	i = bool = 0;
 	if (cmd == NULL)
 	{
 		printf("L%u: usage: push integer\n", ln);
@@ -20,7 +20,9 @@ void _push(char *cmd, stack_t **stack, unsigned int ln)
 	}
 	while (cmd[i] != '\0')
 	{
-		if (isdigit(cmd[i]) == 0)
+		if (cmd[0] == '-')
+			++i;
+		if (isdigit(cmd[i]) == 0 && cmd[i] != 0)
 		{
 			printf("L%u: usage: push integer\n", ln);
 			exit(EXIT_FAILURE);
