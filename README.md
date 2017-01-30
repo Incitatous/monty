@@ -64,4 +64,4 @@ The previous script will push 1, then 2 to the stack and will print them in reve
 
 
 ###Authors
-Monty 0.98 was created by [Kina Lee](https://github.com/kinalee) and [Ian Cugniere](https://github.com/Incitatous).
+Monty 0.98 was created by [Kina Lee](https://github.com/kinalee) and [Ian](https://github.com/Incitatous).
